@@ -12,7 +12,7 @@
     "content_scripts": [
         {
             "matches": [
-                "http://localhost/<Folder_name>/newfile.php"
+                "http://localhost/ctrlS/newfile.php"
             ],
             "js": [
                 "storeSessionData.js"
