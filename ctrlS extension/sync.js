@@ -51,7 +51,7 @@ function checkActive() {
     const params = "projectName=" + projectName + "&teamName=" + teamName + "&username=" + username;
 
     var xhttp = new XMLHttpRequest();
-    var url = "http://www.ctrlscollab.co/ifActive.php";
+    var url = "http://localhost/ctrlS/ifActive.php";
     xhttp.open("POST", url, true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function () {
@@ -107,7 +107,7 @@ function copy() {
         const params = `projectName=` + projectName + `&teamName=` + teamName + `&fileCont=` + fileCont;
 
         var xhttp = new XMLHttpRequest();
-        var url = "http://www.ctrlscollab.co/copy.php";
+        var url = "http://localhost/ctrlS/copy.php";
         xhttp.open("POST", url, true);
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhttp.onreadystatechange = function () {
