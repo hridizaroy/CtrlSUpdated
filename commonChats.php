@@ -22,7 +22,7 @@
         $_SESSION['thread'] = $_POST['thread'];
     }
     elseif (isset($_SESSION['thread'])) {
-        $thread = $_SESSION['thread'];
+        $thread = explode(".txt", $_SESSION['thread'])[0];
     }
     else {
         $_SESSION['message'] = "No chat thread selected.";

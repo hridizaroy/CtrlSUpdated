@@ -163,6 +163,11 @@
                 color: #fff;
             }
 
+            .recOpts a {
+                text-decoration: none;
+                color: #fff;
+            }
+
             .recOpts li:hover {
                 color: #aaa;
             }
@@ -226,20 +231,12 @@
                 <li><button class = "recButton mdl-button mdl-js-button mdl-button--raised mdl-color--primary">Recommendations</button></li>
 
                 <div class = "recOpts">
-                    <li class = "mdl-button mdl-js-button mdl-button--raised">Movies</li>
-                    <li class = "mdl-button mdl-js-button mdl-button--raised">TV Shows</li>
-                    <li class = "mdl-button mdl-js-button mdl-button--raised">Youtube videos</li>
-                    <li class = "mdl-button mdl-js-button mdl-button--raised">Books</li>
+                    <li class = "mdl-button mdl-js-button mdl-button--raised"><a href = "movies.php" target = "_blank">Movies</a></li>
+                    <li class = "mdl-button mdl-js-button mdl-button--raised"><a href = "tvShows.php" target = "_blank">TV Shows</a></li>
+                    <li class = "mdl-button mdl-js-button mdl-button--raised"><a href = "ytvids.php" target = "_blank">Youtube videos</a></li>
+                    <li class = "mdl-button mdl-js-button mdl-button--raised"><a href = "books.php" target = "_blank">Books</a></li>
                 </div>
             </ul>
-                <div class = "recFrameCont">
-                    <iframe src = "movies.php" class = "recFrame"></iframe>
-                    <iframe src = "tvShows.php" class = "recFrame">></iframe>
-                    <iframe src = "ytvids.php" class = "recFrame">></iframe>
-                    <iframe src = "books.php" class = "recFrame">></iframe>
-                    <button class = "closeRec mdl-button mdl-js-button mdl-button--raised">Close</button>
-                </div>
-
 
 
             <!--For opening a file-->
@@ -320,17 +317,9 @@
                 gameButtons[i].addEventListener('click', showGame);
             }
 
-            var recOpts = document.querySelectorAll(".recOpts li");
-            
-            for (var i = 0; i < recOpts.length; i++) {
-                recOpts[i].addEventListener('click', showRec);
-            }
-
             document.querySelector('.recCont').addEventListener('mouseenter', showRecOpts);
 
             document.querySelector('.recCont').addEventListener('mouseleave', hideRecOpts);
-
-            document.querySelector(".closeRec").addEventListener('click', hideRecs);
 
             function showRecOpts() {
                 document.querySelector('.recOpts').style.display = "block";
@@ -338,35 +327,6 @@
 
             function hideRecOpts() {
                 document.querySelector('.recOpts').style.display = "none";
-            }
-
-            function hideRecs() {
-                var recFrames = document.querySelectorAll('.recFrame');
-
-                for (var i = 0; i < recFrames.length; i++) {
-                    recFrames[i].style.display = "none";
-                    hideRecOpts();
-                }
-                document.querySelector('.recCont').addEventListener('mouseleave', hideRecOpts);
-
-                document.querySelector(".closeRec").style.display = "none";
-            }
-
-            function showRec() {
-                
-                showRecOpts();
-
-                document.querySelector('.recCont').removeEventListener('mouseleave', hideRecOpts);
-
-                var x = Array.prototype.indexOf.call(this.parentNode.children, this);
-                var recFrames = document.querySelectorAll('.recFrame');
-
-                for (var i = 0; i < recFrames.length; i++) {
-                    recFrames[i].style.display = "none";
-                }
-               
-                recFrames[x].style.display = "block";
-                document.querySelector(".closeRec").style.display = "block";
             }
 
             function showGame() {
