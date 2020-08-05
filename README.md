@@ -27,6 +27,8 @@ The new features are -
     #Open chrome://extensions in developer mode
     #Select 'Load Unpacked'
     #Choose the extension folder
+    
+    #Also, to test the extension with localhost, the extension assumes the app is in a folder called ctrlS (localhost/ctrlS/home.php)
 
 *********PLEASE NOTE:**********
 In order to make the recommendations, certain APIs were needed for the databases. Since an api key is sensitive, they have been replaced by "<YOUR API KEY>" in the files. Kindly generate your api key from the respective websites and replace it in the files.
