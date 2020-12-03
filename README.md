@@ -1,8 +1,26 @@
 # CtrlSUpdated
 
-The initial version of this app is at https://github.com/hridizaroy/CtrlS
-
 Website: https://www.createchrisvk.in/ctrlS/
+
+#Landing page: index.html
+
+#Basic Feature: Real time shared file editing and project management teams
+
+#Structure: You can be part of multiple teams -> Each team can have multiple projects -> Each project has multiple files, which can be edited in real time only by the members in the team You cannot be part of multiple teams with the same name, or create multiple projects of the same name in the same team. (However, different teams can have projects of the same name)
+
+#Each project page has a chat window for discussion
+
+#Unique feature: The app analyzes the contents of the project you're working on and generates a game based on the contents. The game can be played by the members, while working on the project. The games require at least 2 members of a project to be online on the project page
+
+#The app includes 3 games so far
+
+Word Association wordGamev1.php #Description: A game that generates a random keyword from all the project files' content (Removes stopwords and punctuations) and gives you 3s to enter the first word that comes to your mind when you see the word. Game over if you run out of time or type the same word twice. The other players can see your prompts and responses in real time
+
+Draw the word draw.php #Description: A game where you have to draw an image to explain a word to your teammates. Again, the word is based on the project files' content.
+
+StoryBoard getImgForStoryboard.php #Description: Gets random combinations of keywords from the project, performs a google image search on them, and shows you 3 random images from the search. Your task is to create a story out of these 3 images, which can be communicated via the chatbox.
+
+The game files are embedded as iframes in newfile.php, which is the location for viewing project files, chat window or starting a game.
 
 The new features are -
 
@@ -37,6 +55,3 @@ The following files will need Api keys -
 1. movies.php (api.themoviedb.org)
 2. tvShows.php (api.themoviedb.org)
 3. ytvids.php (Youtube v3 api)
-
-********ALSO NOTE:************
-The website is currently hosted on an http server, and therefore the extension cannot be used with the website at the moment. It will be ready for use once the site is hosted on an https server. Kindly test it with localhost until then.
