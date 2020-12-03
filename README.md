@@ -2,7 +2,7 @@
 
 The initial version of this app is at https://github.com/hridizaroy/CtrlS
 
-Website: http://www.ctrlscollab.co
+Website: https://www.createchrisvk.in/ctrlS/
 
 The new features are -
 
